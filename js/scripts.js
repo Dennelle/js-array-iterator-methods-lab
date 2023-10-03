@@ -74,20 +74,37 @@ console.log(inventorAda);
   // 6. Map the people array such that the new array consists of strings with the names formatted as "First Last", e.g., "Becker, Carl" should be mapped to "Carl Becker".
   // Hint: As a start, consider using the String.prototype.split method to "split" the string using ', ' as the separator
 
-  //const str = 'Becker, Carl';
-  //const words = str.split(', ');
-  //console.log(words.reverse().join(' '));
+// function splitString(person, comma){
+// const arrayOfStrings = person.split(',')
+// console.log(arrayOfStrings.reverse().join(' '));
+// }
 
-  /*
-  const data = [
+// people.map((person)=> {
+//     console.log(person)
+// });
+
+
+ //   const str = 'Becker, Carl';
+//   const words = str.split(', ');
+//   console.log(words.reverse().join(' '));
+
+
+const data = [
     'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van',
     'bike', 'walk', 'car', 'van', 'car', 'truck'
   ];
+
 
   // Array.prototype.reduce()
   // 7. Count the number of instances for each of the data items. The reduce should return an object where the keys are 'car', 'truck', etc. and the values are the count.
   // Hint: Since you want to return an object, be sure to pass an empty {} for the initial value of the "accumulator".
 
+  const vehicles = data.reduce((acc, vehicle) => {
+    acc[vehicle] = acc[vehicle] ? acc[vehicle] + 1 : 1;
+    return acc;
+  }, {});
+
+console.log(vehicles)
 
 
   const devs = [
@@ -101,7 +118,25 @@ console.log(inventorAda);
   // 8. Check if at least one person is 19 or older?
   // Hint: To get today's year, use the getFullYear method of new Date(), i.e., new Date().getFullYear()
 
+const current = new Date();
+let currentYear = current.getFullYear();
+console.log(currentYear)
 
+const over19 = devs.reduce((acc,dev) =>{
+const devsAge = currentYear - devs.year
+return acc + devsAge
+},0);
+
+console.log(over19);
+
+//   const yearsLived =inventors.reduce((acc, inventor) =>{
+//     const lifeSpan = inventor.passed - inventor.year
+//     return acc + lifeSpan
+//   },0)
+//   console.log(yearsLived)
+
+
+/*
   // Array.prototype.every()
   // 9. Check if everyone is 19 or older?
 
@@ -131,7 +166,7 @@ console.log(inventorAda);
 
 
 
-//-------------------------------------------------------------
+//----ANSWERS---------------------------------------------------------
   [ { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
   { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 } ]
 
