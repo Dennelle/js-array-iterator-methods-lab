@@ -118,28 +118,31 @@ console.log(vehicles)
   // 8. Check if at least one person is 19 or older?
   // Hint: To get today's year, use the getFullYear method of new Date(), i.e., new Date().getFullYear()
 
-const current = new Date();
-let currentYear = current.getFullYear();
-console.log(currentYear)
+  const current = new Date();
+  let currentYear = current.getFullYear();
+  console.log(currentYear)
 
-const over19 = devs.reduce((acc,dev) =>{
-const devsAge = currentYear - devs.year
-return acc + devsAge
-},0);
+  console.log(devs.year)
 
-console.log(over19);
-
-//   const yearsLived =inventors.reduce((acc, inventor) =>{
-//     const lifeSpan = inventor.passed - inventor.year
-//     return acc + lifeSpan
-//   },0)
-//   console.log(yearsLived)
+  const over19 = devs.some((dev) => dev.year >= '2004');
+  console.log(over19)
 
 
-/*
   // Array.prototype.every()
   // 9. Check if everyone is 19 or older?
 
+const cars = [
+  {color: 'red', make: 'BMW', year: 2001},
+  {color: 'white', make: 'Toyota', year: 2013},
+  {color: 'black', make: 'Ford', year: 2014},
+  {color: 'white', make: 'Tesla', year: 2016}
+];
+
+const everyCarIsNewerThan2000 = cars.every((car) => car.year > 2000);
+// everyCarIsNewerThan2000 -> true
+
+const everyoneOver21 =devs.every((dev) => dev.year >= 2004);
+console.log(everyoneOver21)
 
 
   const comments = [
@@ -153,11 +156,16 @@ console.log(over19);
   // Array.prototype.find()
   // 10. Find the comment with the id of 823423
 
+const findNumbers = comments.find((number) => number.id === 823423)
 
+console.log(findNumbers)
 
   // Array.prototype.findIndex()
   // 11. Find the index of the comment with an id of 123523
 
+  const findCommentNumbers = comments.findIndex((commentNumber) => commentNumber.id = 123523 )
+
+  console.log(findCommentNumbers)
 
 
 
@@ -166,7 +174,7 @@ console.log(over19);
 
 
 
-//----ANSWERS---------------------------------------------------------
+/*----ANSWERS---------------------------------------------------------
   [ { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
   { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 } ]
 
