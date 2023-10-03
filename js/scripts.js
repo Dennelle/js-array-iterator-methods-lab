@@ -74,6 +74,33 @@ console.log(inventorAda);
   // 6. Map the people array such that the new array consists of strings with the names formatted as "First Last", e.g., "Becker, Carl" should be mapped to "Carl Becker".
   // Hint: As a start, consider using the String.prototype.split method to "split" the string using ', ' as the separator
 
+  const firstLastPeople = people.map((person) => {
+    return person.split(', ').reverse().join(' ')
+  })
+
+  console.log(firstLastPeople)
+
+
+//     const firstLastPeople = people.map((person) => {
+//     const splitArray = person.split (', ')
+//     return
+// });
+
+// console.log(splitArray.reverse().join(' '));
+
+
+//     const els = people.map((person, ) => {
+//     const el = person.split()
+//     return el;
+//   });
+
+//   // Append the <div>s to the end of the <body>
+//   //els.forEach(el => document.body.append(el));
+
+//   console.log(els.join(', '));
+
+
+
 // function splitString(person, comma){
 // const arrayOfStrings = person.split(',')
 // console.log(arrayOfStrings.reverse().join(' '));
@@ -122,7 +149,7 @@ console.log(vehicles)
   let currentYear = current.getFullYear();
   console.log(currentYear)
 
-  console.log(devs.year)
+  //console.log(devs.year)
 
   const over19 = devs.some((dev) => dev.year >= '2004');
   console.log(over19)
@@ -131,8 +158,8 @@ console.log(vehicles)
   // Array.prototype.every()
   // 9. Check if everyone is 19 or older?
 
-const everyoneOver21 =devs.every((dev) => dev.year >= 2004);
-console.log(everyoneOver21)
+const everyoneOver19 =devs.every((dev) => dev.year >= 2004);
+console.log(everyoneOver19)
 
 
   const comments = [
@@ -156,7 +183,6 @@ console.log(findNumbers)
   const findCommentNumbers = comments.findIndex((commentNumber) => commentNumber.id === 123523)
 
   console.log(findCommentNumbers)
-
 
 
 
