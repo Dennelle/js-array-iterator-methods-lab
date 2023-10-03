@@ -80,47 +80,10 @@ console.log(inventorAda);
 
   console.log(firstLastPeople)
 
-
-//     const firstLastPeople = people.map((person) => {
-//     const splitArray = person.split (', ')
-//     return
-// });
-
-// console.log(splitArray.reverse().join(' '));
-
-
-//     const els = people.map((person, ) => {
-//     const el = person.split()
-//     return el;
-//   });
-
-//   // Append the <div>s to the end of the <body>
-//   //els.forEach(el => document.body.append(el));
-
-//   console.log(els.join(', '));
-
-
-
-// function splitString(person, comma){
-// const arrayOfStrings = person.split(',')
-// console.log(arrayOfStrings.reverse().join(' '));
-// }
-
-// people.map((person)=> {
-//     console.log(person)
-// });
-
-
- //   const str = 'Becker, Carl';
-//   const words = str.split(', ');
-//   console.log(words.reverse().join(' '));
-
-
 const data = [
     'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van',
     'bike', 'walk', 'car', 'van', 'car', 'truck'
   ];
-
 
   // Array.prototype.reduce()
   // 7. Count the number of instances for each of the data items. The reduce should return an object where the keys are 'car', 'truck', etc. and the values are the count.
@@ -132,7 +95,6 @@ const data = [
   }, {});
 
 console.log(vehicles)
-
 
   const devs = [
     { name: 'Wes', year: 1988 },
