@@ -131,16 +131,6 @@ console.log(vehicles)
   // Array.prototype.every()
   // 9. Check if everyone is 19 or older?
 
-const cars = [
-  {color: 'red', make: 'BMW', year: 2001},
-  {color: 'white', make: 'Toyota', year: 2013},
-  {color: 'black', make: 'Ford', year: 2014},
-  {color: 'white', make: 'Tesla', year: 2016}
-];
-
-const everyCarIsNewerThan2000 = cars.every((car) => car.year > 2000);
-// everyCarIsNewerThan2000 -> true
-
 const everyoneOver21 =devs.every((dev) => dev.year >= 2004);
 console.log(everyoneOver21)
 
@@ -163,7 +153,7 @@ console.log(findNumbers)
   // Array.prototype.findIndex()
   // 11. Find the index of the comment with an id of 123523
 
-  const findCommentNumbers = comments.findIndex((commentNumber) => commentNumber.id = 123523 )
+  const findCommentNumbers = comments.findIndex((commentNumber) => commentNumber.id === 123523)
 
   console.log(findCommentNumbers)
 
