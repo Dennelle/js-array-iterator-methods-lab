@@ -44,13 +44,16 @@ const inventors = [
 
 console.log(inventorAda);
 
-
-
-/*
   // Array.prototype.reduce()
   // 5. How many years did all the inventors live?
 
+  //need to subtracted passed from year to get age died.
 
+  const yearsLived =inventors.reduce((acc, inventor) =>{
+    const lifeSpan = inventor.passed - inventor.year
+    return acc + lifeSpan
+  },0)
+  console.log(yearsLived)
 
 
   const people = [
@@ -71,9 +74,11 @@ console.log(inventorAda);
   // 6. Map the people array such that the new array consists of strings with the names formatted as "First Last", e.g., "Becker, Carl" should be mapped to "Carl Becker".
   // Hint: As a start, consider using the String.prototype.split method to "split" the string using ', ' as the separator
 
+  //const str = 'Becker, Carl';
+  //const words = str.split(', ');
+  //console.log(words.reverse().join(' '));
 
-
-
+  /*
   const data = [
     'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van',
     'bike', 'walk', 'car', 'van', 'car', 'truck'
@@ -118,6 +123,15 @@ console.log(inventorAda);
   // Array.prototype.findIndex()
   // 11. Find the index of the comment with an id of 123523
 
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------
   [ { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
   { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 } ]
 
